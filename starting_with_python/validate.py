@@ -5,9 +5,9 @@ import os
 # Gets the version
 print('getting connector')
 ctx = snowflake.connector.connect(
-    user=os.getenv('SNOWFLAKE_USER'),
-    password=os.getenv('SNOWFLAKE_PWD'),
-    account=os.getenv('SNOWFLAKE_ACCT')
+    user=os.getenv('SNOWFLAKE_PYTHON_USER'),
+    password=os.getenv('SNOWFLAKE_PYTHON_PWD'),
+    account=os.getenv('SNOWFLAKE_PYTHON_ACCT')
     )
 print("getting cursor")
 cs = ctx.cursor()
